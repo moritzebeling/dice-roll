@@ -25,7 +25,7 @@
 
     main {
         position: fixed;
-        top: calc( ( 100vh - 100vw ) / 2 );
+        top: calc( ( var(--100vh) - 100vw ) / 2 );
         left: 0;
         width: 100vw;
         height: 100vw;
@@ -34,9 +34,9 @@
     @media (orientation: landscape){
         main {
             top: 0;
-            left: calc( ( 100vw - 100vh ) / 2 );
-            width: 100vh;
-            height: 100vh;
+            left: calc( ( 100vw - var(--100vh) ) / 2 );
+            width: var(--100vh);
+            height: var(--100vh);
             --size: 23vh;
         }
     }
