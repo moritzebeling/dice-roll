@@ -28,14 +28,9 @@
 
         let i = 0;
         while( i < sequence.length ){
-            number = sequence[i];
             await Dice.delay( speed );
+            number = sequence[i];
             speed += step;
-            console.log({
-                i: i,
-                number: number,
-                speed: speed,
-            });
             document.body.style.setProperty('--speed', speed + 'ms');
             i++;
         }
@@ -47,4 +42,30 @@
 
 <svelte:window on:keydown={roll} on:click={roll} />
 
-<Visual {number} />
+<Visual {number} finished={!running} />
+
+{#if !number}
+    <main>
+        <button>Click to roll dice</button>
+    </main>
+{/if}
+
+<style>
+
+    main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    button {
+        color: var(--color);
+        background: transparent;
+        font-size: 2rem;
+    }
+
+</style>
