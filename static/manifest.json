@@ -1,0 +1,16 @@
+{
+    "name": "Dice",
+    "short_name": "Dice",
+    "description": "Roll a dice",
+    "icons": {
+        "180": "/favicon.png"
+    },
+    "author": "Moritz Ebeling",
+    "developer": {
+        "name": "Moritz Ebeling",
+        "url": "https://moritzebeling.com"
+    },
+    "homepage_url": "https://github.com/moritzebeling/dice-roll",
+    "offline_enabled": true,
+    "standalone": true
+}
