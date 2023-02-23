@@ -1,8 +1,8 @@
 <script>
 
-    import Visual from "$lib/Visual.svelte";
-    import { Dice } from "$lib/Dice";
-    import Menu from "$lib/Menu.svelte";
+    import Visual from "$lib/dice/Visual.svelte";
+    import { Dice } from "$lib/dice/Dice.js";
+    import Menu from "$lib/settings/Menu.svelte";
     
     const dice = new Dice();
     

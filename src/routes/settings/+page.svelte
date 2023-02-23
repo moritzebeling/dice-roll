@@ -1,6 +1,6 @@
 <script>
     
-    import { settingsStore } from "$lib/stores";
+    import { settingsStore } from "$lib/settings/stores";
 
     settingsStore.subscribe( s => {
         console.log(s);
