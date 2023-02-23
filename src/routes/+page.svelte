@@ -2,6 +2,7 @@
 
     import Visual from "$lib/Visual.svelte";
     import { Dice } from "$lib/Dice";
+    import Menu from "$lib/Menu.svelte";
     
     const dice = new Dice();
     
@@ -40,13 +41,13 @@
 
 </script>
 
-<svelte:window on:keydown={roll} on:click={roll} />
+<Menu />
 
 <Visual {number} finished={!running} />
 
 {#if !number}
     <main>
-        <button>Click to roll dice</button>
+        <button on:click={roll}>Click to roll dice</button>
     </main>
 {/if}
 
@@ -62,6 +63,7 @@
         text-align: center;
         justify-content: center;
     }
+
     button {
         color: var(--color);
         background: transparent;
