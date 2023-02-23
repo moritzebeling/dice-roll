@@ -2,9 +2,9 @@
     "name": "Dice",
     "short_name": "Dice",
     "description": "Roll a dice",
-    "icons": {
-        "180": "/favicon.png"
-    },
+    "icons": [
+        "/favicon.png"
+    ],
     "author": "Moritz Ebeling",
     "developer": {
         "name": "Moritz Ebeling",

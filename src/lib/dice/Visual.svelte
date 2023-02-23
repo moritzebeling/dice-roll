@@ -21,23 +21,15 @@
     <div class="die-7" class:finished class:visible={selected.includes(7)}></div>
 </main>
 
-<style>
+<style lang="scss">
 
     main {
-        position: fixed;
-        top: calc( ( var(--100vh) - 100vw ) / 2 );
-        left: 0;
-        width: 100vw;
-        height: 100vw;
-        --size: 23vw;
-    }
-    @media (orientation: landscape){
-        main {
-            top: 0;
-            left: calc( ( 100vw - var(--100vh) ) / 2 );
-            width: var(--100vh);
-            height: var(--100vh);
-            --size: 23vh;
+        --size: 12vh;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        @media (orientation: landscape){
+            --size: 22vh;
         }
     }
 
@@ -45,50 +37,51 @@
         width: var(--size);
         height: var(--size);
         border-radius: 100%;
-        background-color: white;
+        background-color: var(--color);
         position: absolute;
         transform: translate(-50%, -50%) scale(0);
         transition: transform var(--speed) ease;
-    }
-    div.visible {
-        transform: translate(-50%, -50%) scale(0.8);
-    }
-    div.visible.finished {
-        transform: translate(-50%, -50%) scale(1.1);
-    }
-
-    .die-1,
-    .die-7,
-    .die-4 {
-        left: 50%;
+        &.visible {
+            transform: translate(-50%, -50%) scale(0.75);
+        }
+        &.visible.finished {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
     }
 
-    .die-6,
-    .die-5 {
-        left: 21.33%;
-    }
-    
-    .die-2,
-    .die-3 {
-        left: 78.66%;
+    .die {
+        &-1,
+        &-7,
+        &-4 {
+            left: 50%;
+        }
+        &-6,
+        &-5 {
+            left: 21.33%;
+        }
+        &-2,
+        &-3 {
+            left: 78.66%;
+        }
+        
+        &-1 {
+            top: 16.66%;
+        }
+        &-6,
+        &-2 {
+            top: 33.33%;
+        }
+        &-7 {
+            top: 50%;
+        }
+        &-5,
+        &-3 {
+            top: 66.66%;
+        }
+        &-4 {
+            top: 83.33%;
+        }
     }
 
-    .die-1 {
-        top: 16.66%;
-    }
-    .die-6,
-    .die-2 {
-        top: 33.33%;
-    }
-    .die-7 {
-        top: 50%;
-    }
-    .die-5,
-    .die-3 {
-        top: 66.66%;
-    }
-    .die-4 {
-        top: 83.33%;
-    }
 
 </style>
